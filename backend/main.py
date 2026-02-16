@@ -8,11 +8,18 @@ from rabin_karp import RabinKarpDetector
 app = FastAPI()
 
 # CORS Setup (allowing frontend to contact this backend)
+origins = [
+    "http://localhost:5173",                      # For local testing
+    "http://127.0.0.1:5173",                      # Alternative local address
+    "https://ai-text-detector-one.vercel.app",    # Vercel Deployment
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"], #Currently allowing any frontend to talk 
-    allow_methods=["*"], #Allows GET, POST, PUT, DELETE
-    allow_headers=["*"], 
+    allow_origins=origins, 
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 # Defining the Schema
