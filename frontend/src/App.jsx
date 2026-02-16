@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { AlertCircle, CheckCircle, Brain, Search, X} from 'lucide-react';
+const API_URL = import.meta.env.VITE_API_URL;
+
 function App() {
   //State variables
   const [text, setText] = useState("");
@@ -18,7 +20,7 @@ function App() {
 
     try {
       // The FETCH Request
-      const response = await fetch("http://localhost:8000/analyze", {
+      const response = await fetch(`${API_URL}/analyze`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ text: text }),
