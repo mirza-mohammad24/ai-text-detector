@@ -7,41 +7,71 @@ class RabinKarpDetector:
        # THE EXPANDED DATABASE
         # We categorize these to show we understand AI behavior
         self.suspicious_patterns = {
-            # CATEGORY A: The "Dead Giveaways" (High Weight: 10) 
-            # These are extremely rare in casual human writing
+            # HIGH IMPACT (10 points) - Classic ChatGPT dramatic metaphors
             "delve into": 10,
             "tapestry of": 10,
             "testament to": 10,
-            "underscores the": 10,
             "transformative power": 10,
+            "underscores the": 10,
             "democratize": 10,
             "foster a sense": 10,
             "nuanced understanding": 10,
-            
-            # CATEGORY B: The "Robot Transitions" (Medium Weight: 6-8)
-            # AI uses these to structure paragraphs perfectly
+            "indelible mark": 10,
+            "landscape of": 10,
+            "realm of": 10,
+            "paradigm shift": 10,
+            "seamless integration": 10,
+            "beacon of": 10,
+            "multifaceted approach": 10,
+            "symbiotic relationship": 10,
+            "intricate dance": 10,
+            "navigating the complexities": 10,
+            "a stark reminder": 10,
+            "catalyst for change": 10,
+        
+            # MEDIUM IMPACT (7 points) - Common structural and conclusive markers
+            "in conclusion": 7,
             "it is important to note": 7,
-            "in conclusion": 6,
-            "moreover": 6,
-            "consequently": 6,
-            "furthermore": 6,
-            "stark contrast": 7,
-            "crucial aspect": 6,
-            "realm of": 6,
-            "landscape of": 6,
+            "it is crucial to": 7,
+            "it is worth noting": 7,
+            "ultimately": 7,
+            "at its core": 7,
+            "serves as a reminder": 7,
+            "in essence": 7,
+            "ever-evolving": 7,
+            "rapidly evolving": 7,
+            "game-changer": 7,
             "poised to": 7,
-            
-            # CATEGORY C: The "Empty Fillers" (Low Weight: 4-5)
-            # Words that sound smart but say little.
+            "unleash the": 7,
+            "harness the power": 7,
+            "shed light on": 7,
+            "pivotal role": 7,
+            "vital role": 7,
+            "by and large": 7,
+            "to summarize": 7,
+            "in summary": 7,
+        
+            # LOWER IMPACT (4 points) - Overused vocabulary and transitions
             "significantly": 4,
             "comprehensive": 4,
-            "meticulous": 5,
-            "indelible mark": 5,
-            "ever-evolving": 5,
-            "rapidly evolving": 4,
-            "game-changer": 4,
-            "unleash the": 4,
-            "harness the power": 5
+            "meticulous": 4,
+            "moreover": 4,
+            "consequently": 4,
+            "furthermore": 4,
+            "additionally": 4,
+            "subsequently": 4,
+            "stark contrast": 4,
+            "crucial aspect": 4,
+            "leveraging": 4,
+            "utilizing": 4,
+            "dynamic": 4,
+            "robust": 4,
+            "resilient": 4,
+            "noteworthy": 4,
+            "pertinent": 4,
+            "intricate": 4,
+            "paramount": 4,
+            "imperative": 4
         }
 
     def search_pattern(self, text, pattern):
