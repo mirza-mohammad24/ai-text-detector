@@ -1,4 +1,4 @@
-# 🕵️‍♂️ Stylometric AI Text Detector (Rabin–Karp Algorithm)
+# 🕵️‍♂️ Stylometric AI Text Detector (Rabin–Karp)
 
 A pattern-recognition tool designed to identify “artificial” writing styles by analyzing structural repetition and high-frequency n-grams using the **Rabin–Karp Rolling Hash Algorithm**.
 
