@@ -7,7 +7,7 @@ A pattern-recognition tool designed to identify “artificial” writing styles 
 
 ---
 
-## 🧠 The Algorithm: Why Rabin?
+## 🧠 The Algorithm: Why Rabin-Karp?
 
 Unlike standard string matching (**O(n × m)**), this project utilizes the **Rabin–Karp algorithm** for efficient multi-pattern search.
 
